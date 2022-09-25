@@ -19,7 +19,7 @@ def adminLoginWindow():
     print("1.Display Menu")
     print("2.Add Product")
     print("3.Remove Product")
-    print("4.Products goods available")
+    print("4.Products Available")
     print("5.Total Income")
     print("6.Logout")
     print("=====================")
@@ -38,8 +38,8 @@ def addproducts():
         new_id = int(input("Enter id : "))
         new_Name = input("Enter Name : ")
         new_Available = int(input("Enter Available : "))
-        new_Price = int(input("Enter Price : "))
-        new_original = int(input("Enter the original price : "))
+        new_Price = int(input("Enter Discount Price : "))
+        new_original = int(input("Enter the orUiginal price : "))
         d = [{"id": new_id, "Name": new_Name, "Available": new_Available, "Price": new_Price,
               "Original_Price": new_original}]
         shopping.extend(d)
@@ -172,10 +172,10 @@ def placeOrder():
                 break
 
             elif conform == 'N' or conform == 'n':
-                print("The order is not placed. You can carry on with you purchase. Happy shopping!!!!")
+                print("The order is not placed. You can carry on with you purchase. Happy shopping!!!")
                 break
             else:
-                print("\nYou have entered wrong option. Please enter again\n")
+                print("\nInvalid. Please enter again\n")
                 conform = input("\nDo you want to place an order on the above shown product : Y/N ")
                 break
 
@@ -227,10 +227,10 @@ def userChoiceOptions():
 
 
 def login():
-    tp = input("Login Admin/Login User [Type A to Login in the Admin/ Type U to Login in the User] : ")
+    tp = input(" Login   Admin  /  UserLogin   [Type A OR U]  : ")
     if tp == 'A' or tp == 'a':
         password = input("Enter the password : ")
-        if password == "itsourcecode":
+        if password == "NabKich_x_3":
             adminLoginWindow()
             adminOptions()
         else:
@@ -238,7 +238,7 @@ def login():
 
     elif tp == 'U' or tp == 'u':
         password = input("Enter the password : ")
-        if (password == "itsourcecode1"):
+        if password == "NabKich_x_3":
             userLoginWindow()
             userChoiceOptions()
         else:

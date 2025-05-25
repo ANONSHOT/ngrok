@@ -1,0 +1,22 @@
+ import java.awt.*;
+import java.awt.event.*;
+ public class PersonalInfoFrame extends Frame implements ActionListener {
+    Button showBtn;
+    Label infoLabel;
+    public PersonalInfoFrame() {
+        setLayout(new FlowLayout());
+        showBtn = new Button("Check Info");
+        infoLabel = new Label("");
+        add(showBtn);
+        add(infoLabel);
+        showBtn.addActionListener(this);
+        setSize(300, 150);
+        setVisible(true);
+    }
+    public void actionPerformed(ActionEvent e) {
+        infoLabel.setText("Name: John | Age: 20 | Course: BCA");
+    }
+    public static void main(String[] args) {
+        new PersonalInfoFrame();
+    }
+ }

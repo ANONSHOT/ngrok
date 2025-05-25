@@ -1,0 +1,29 @@
+ import java.awt.*;
+import java.awt.event.*;
+ public class ShapeMover extends Frame implements KeyListener {
+    int x = 100, y = 100;
+    public ShapeMover() {
+        setSize(400, 400);
+        setTitle("Shape Mover");
+        setVisible(true);
+        addKeyListener(this);
+    }
+    public void paint(Graphics g) {
+        g.clearRect(0, 0, 400, 400);
+        g.setColor(Color.BLUE);
+        g.fillRect(x, y, 50, 50);
+    }
+    public void keyPressed(KeyEvent e) {
+        int key = e.getKeyCode();
+        if (key == KeyEvent.VK_LEFT) x -= 10;
+        else if (key == KeyEvent.VK_RIGHT) x += 10;
+        else if (key == KeyEvent.VK_UP) y -= 10;
+        else if (key == KeyEvent.VK_DOWN) y += 10;
+        repaint();
+    }
+    public void keyReleased(KeyEvent e) {}
+    public void keyTyped(KeyEvent e) {}
+    public static void main(String[] args) {
+        new ShapeMover();
+    }
+ }

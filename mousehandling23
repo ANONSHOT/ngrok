@@ -1,0 +1,37 @@
+ import java.awt.*;
+ import java.awt.event.*;
+ public class MouseEventsDemo extends Frame implements MouseListener {
+    String msg = "";
+    public MouseEventsDemo() {
+        setSize(400, 300);
+        setTitle("Mouse Events Demo");
+        setVisible(true);
+        addMouseListener(this);
+    }
+    public void paint(Graphics g) {
+        g.drawString(msg, 100, 150);
+    }
+    public void mouseClicked(MouseEvent e) {
+        msg = "Mouse Clicked";
+        repaint();
+    }
+    public void mouseEntered(MouseEvent e) {
+        msg = "Mouse Entered";
+        repaint();
+    }
+    public void mouseExited(MouseEvent e) {
+        msg = "Mouse Exited";
+        repaint();
+    }
+    public void mousePressed(MouseEvent e) {
+        msg = "Mouse Pressed";
+        repaint();
+    }
+    public void mouseReleased(MouseEvent e) {
+        msg = "Mouse Released";
+        repaint();
+    }
+    public static void main(String[] args) {
+        new MouseEventsDemo();
+    }
+ }

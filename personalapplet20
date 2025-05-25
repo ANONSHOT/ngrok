@@ -1,0 +1,10 @@
+ import java.applet.*;
+ import java.awt.*;
+ public class PersonalInfoApplet extends Applet {
+    public void paint(Graphics g) {
+        g.drawString("Name: John Doe", 20, 20);
+        g.drawString("Age: 20", 20, 40);
+        g.drawString("College: Benedict College", 20, 60);
+    }
+ }
+ // <applet code="PersonalInfoApplet.class" width="300" height="100"></applet

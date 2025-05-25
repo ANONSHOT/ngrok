@@ -1,0 +1,29 @@
+import java.awt.*;
+ import java.awt.event.*;
+ public class ParentInfoFrame extends Frame implements ActionListener {
+    Button fatherBtn, motherBtn;
+    Label infoLabel;
+    public ParentInfoFrame() {
+        setLayout(new FlowLayout());
+        fatherBtn = new Button("Father");
+        motherBtn = new Button("Mother");
+        infoLabel = new Label("");
+        add(fatherBtn);
+        add(motherBtn);
+        add(infoLabel);
+        fatherBtn.addActionListener(this);
+        motherBtn.addActionListener(this);
+        setSize(400, 200);
+        setVisible(true);
+    }
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == fatherBtn) {
+            infoLabel.setText("Father: Mr. Robert | Age: 45 | Engineer");
+        } else if (e.getSource() == motherBtn) {
+            infoLabel.setText("Mother: Mrs. Anna | Age: 42 | Teacher");
+        }
+    }
+    public static void main(String[] args) {
+        new ParentInfoFrame();
+    }
+ }

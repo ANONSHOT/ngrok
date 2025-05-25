@@ -1,0 +1,17 @@
+ import java.awt.*;
+ public class FontMessageWindow extends Frame {
+    public FontMessageWindow() {
+        setTitle("Welcome Window");
+        setSize(400, 200);
+        setVisible(true);
+    }
+    public void paint(Graphics g) {
+        Font customFont = new Font("Serif", Font.BOLD | Font.ITALIC, 24);
+        g.setFont(customFont);
+        g.setColor(Color.MAGENTA);
+        g.drawString("Welcome to Benedict College", 50, 100);
+    }
+    public static void main(String[] args) {
+        new FontMessageWindow();
+    }
+ }
